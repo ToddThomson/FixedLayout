@@ -15,7 +15,7 @@
         version: "1.1 Beta",
 
         slide: function (name, reverse, $to, $from) {
-            var deferred = new $.Deferred()
+            var deferred = new $.Deferred(),
 
 		    animateToClasses = reverse ? ' slide in reverse' : ' slide in',
 		    animateFromClasses = reverse ? ' slide out reverse' : ' slide out',
