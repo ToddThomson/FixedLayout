@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tablet Fixed Layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="apple-touch-fullscreen" content="YES" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link href="@Url.Content("~/content/panes.css" )" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/content/tablet.css" )" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 175px; }
+            .right.col { left: 175px; right: 0; }
+            .header.row { height: 75px; line-height: 75px; }
+            .body.row { top: 75px; bottom: 0; }
+            .footer.row { height: 50px; bottom: 0; line-height: 50px; }
+        </style>
+
+    </head>
+    <body>
+        @RenderBody()
+        
+    </body>
+</html>
