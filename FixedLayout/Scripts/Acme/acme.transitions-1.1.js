@@ -21,19 +21,19 @@
 		    animateFromClasses = reverse ? ' slide out reverse' : ' slide out',
 
             maxTransitionOverride = $.mobile.maxTransitionWidth !== false && $(window).width() > $.mobile.maxTransitionWidth,
-			none = !$.support.cssTransitions || maxTransitionOverride || !name || name === "none",
+			none = !$.support.cssTransitions || maxTransitionOverride || !name || name === "none";
 
-			startAnimation = function () {
+            startAnimation = function () {
 
-			    if ($from) {
-			        $from.addClass(animateFromClasses);
-			    }
-                
-			    $to.css({ display: 'block', top: '', bottom: '' });
+                if ($from) {
+                    $from.addClass(animateFromClasses);
+                }
 
-			    $to.addClass(animateToClasses);
-			    $to.animationComplete(endAnimation);
-			},
+                $to.css({ display: 'block', top: '', bottom: '' });
+
+                $to.addClass(animateToClasses);
+                $to.animationComplete(endAnimation);
+            }
 
 			endAnimation = function () {
 
@@ -52,9 +52,9 @@
 			    $.mobile.focusPage($to);
 
 			    deferred.resolve(name, reverse, $to, $from, true);
-			};
+			}
 
-            self = this;
+            var self = this;
 
             if (!none) {
                 setTimeout(function () {
